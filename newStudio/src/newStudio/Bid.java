@@ -26,8 +26,8 @@ public class Bid {
         else return false;
     }
 
-    public boolean incrementBid(int maxBid) {
-        int newBid = this.bidAmount + this.increment;
+    public boolean raiseBid(int maxBid, int increment) {
+        int newBid = this.bidAmount + increment;
         if(!checkExceedsMax(newBid, maxBid)) {
             this.bidAmount = newBid;
             return true;
