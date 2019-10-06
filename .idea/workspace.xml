@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fcfdf6e-b3c6-4afe-949e-5ee81c0d9d59" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newStudio/src/newStudio/Auction.java" beforeDir="false" afterPath="$PROJECT_DIR$/newStudio/src/newStudio/Auction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/newStudio/src/newStudio/Bid.java" beforeDir="false" afterPath="$PROJECT_DIR$/newStudio/src/newStudio/Bid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/newStudio/src/newStudio/Bidder.java" beforeDir="false" afterPath="$PROJECT_DIR$/newStudio/src/newStudio/Bidder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/newStudio/newStudio/Auction.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

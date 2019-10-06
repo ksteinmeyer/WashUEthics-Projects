@@ -2,19 +2,24 @@ package newStudio;
 
 public class Bid {
     private int bidAmount;
-    private int increment;
+  //  private int increment;
+    private int maxBid;
 
     /**
      * Constructor for Bid
      * @param bidAmount
-     * @param increment
+    / * @param increment
      */
-    public Bid(int bidAmount, int increment) {
+    public Bid(int bidAmount, int maxBid) {
         this.bidAmount = bidAmount;
+        this.maxBid = maxBid;
     }
 
     public int getBidAmount() {
         return this.bidAmount;
+    }
+    public int getMaxBid() {
+        return this.maxBid;
     }
 
     public void setBidAmount(int newBid) {
