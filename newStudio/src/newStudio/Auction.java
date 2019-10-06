@@ -5,9 +5,13 @@ public class Auction {
     private final String name;
     private final int incrementAmount; //how much bids will increment by
     private final int startingValue; //starting value of auction
+
+    private Bidder[] bidders = {new Bidder};
+
     private String[] bidName; //using parallel array to store information about the bid's name, amount, and max bid
     private int[] bidAmount;
     private int[] bidMax;
+
     private int size; //size of arrays
     private String winner;
 
@@ -17,7 +21,6 @@ public class Auction {
         Auction auction = new Auction("auction",2, 1);
         auction.addBid(a);
         auction.addBid(b);
-
     }
 
     public Auction(String name, int incrementAmount, int startingValue){ //constructor creates object and initializes variables inside
@@ -70,6 +73,7 @@ public class Auction {
         }
         winner = bidName[indexOfMax]; //sets new winner to the name of the bid at highest amount index
     }
+
     private void bidRaise(int []bidAmount, int []bidMax){
         for(int i = 0; i < size; i++){
             if(bidAmount[i] > bidMax[i]){
@@ -81,6 +85,7 @@ public class Auction {
             }
         }
     }
+
     private void delete(int x){
         String toPrint = bidName[x];
         bidName[x] = null;
