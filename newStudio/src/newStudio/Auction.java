@@ -11,7 +11,14 @@ public class Auction {
     private int size; //size of arrays
     private String winner;
 
+    public static void main(String[] args) {
+        Bid a = new Bid("a", 10, 2);
+        Bid b = new Bid("b", 11, 1);
+        Auction auction = new Auction("auction",2, 1);
+        auction.addBid(a);
+        auction.addBid(b);
 
+    }
 
     public Auction(String name, int incrementAmount, int startingValue){ //constructor creates object and initializes variables inside
         this.name = name;
@@ -91,12 +98,5 @@ public class Auction {
         System.out.println("Bid " + toPrint + " is no longer in auction: " + this.name);
     }
 
-    public static void main(String[] args) {
-        Bid a = new Bid("a", 10, 2);
-        Bid b = new Bid("b", 11, 1);
-        Auction auction = new Auction("auction",2, 1);
-        auction.addBid(a);
-        auction.addBid(b);
 
-    }
 }
