@@ -1,39 +1,42 @@
 package newStudio;
 
 public class Bid {
-    private final String name;
-    private final int maxBid;
     private int bidAmount;
+    private int increment;
 
-
-
-    public Bid(String name, int maxBid, int bidAmount){ //constructor for Bid object
-        //you can make a new bid by initializing 'Bid a = new Bid(6, 10)'
+    /**
+     * Constructor for Bid
+     * @param bidAmount
+     * @param increment
+     */
+    public Bid(int bidAmount, int increment) {
         this.bidAmount = bidAmount;
-        this.maxBid = maxBid;
-        this.name = name;
     }
-    public String getName(){
-        return this.name;
-    }
-    public int getMaxBid(){
-        return this.maxBid;
-    }
-    public int getBidAmount(){
+
+    public int getBidAmount() {
         return this.bidAmount;
     }
 
-    public void setBidAmount(){
-        this.bidAmount = bidAmount;
-    }
-    public String withDrawBid(){
-        getBidIndex(a); //need to fix to allow user to withdraw bid
-        return"Bid "+name+" is no longer in auction";
+    public void setBidAmount(int newBid) {
+        this.bidAmount = newBid;
     }
 
-    public static void main(String[] args){
-       Bid a = new Bid("a", 10, 1);
+    public boolean checkExceedsMax(int bid, int max) {
+        if (bid>max) return true;
+        else return false;
     }
+
+    public boolean incrementBid(int maxBid) {
+        int newBid = this.bidAmount + this.increment;
+        if(!checkExceedsMax(newBid, maxBid)) {
+            this.bidAmount = newBid;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+}
 
 
 

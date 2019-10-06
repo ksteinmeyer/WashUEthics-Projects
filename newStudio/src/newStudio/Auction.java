@@ -6,11 +6,11 @@ public class Auction {
     private final int incrementAmount; //how much bids will increment by
     private final int startingValue; //starting value of auction
 
-    private Bidder[] bidders = {new Bidder};
+    private Bidder[] bidders = new Bidder[2];
 
-    private String[] bidName; //using parallel array to store information about the bid's name, amount, and max bid
-    private int[] bidAmount;
-    private int[] bidMax;
+//    private String[] bidName; //using parallel array to store information about the bid's name, amount, and max bid
+//    private int[] bidAmount;
+//    private int[] bidMax;
 
     private int size; //size of arrays
     private String winner;
