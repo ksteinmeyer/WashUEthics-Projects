@@ -34,7 +34,7 @@ public class EthicalAuction {
 
         //here's your auction, you can decide how much bids should increment by (increase by), what the starting bid of your
         //auction should be, and which bidders will participate in your auction
-        Auction auction = new Auction("auction",2, 4, Player1, Player2);
+        EthicalAuction auction = new EthicalAuction("auction",2, 4, Player1, Player2);
 
     }
 
@@ -114,10 +114,8 @@ public class EthicalAuction {
      */
     private void currentWinner(){ //calculates current winner of auction
         if(bidderCurrentBids[1] >= bidderCurrentBids[0] && bidderCurrentBids[0] > 0){
-             System.out.println(bidderNames[0]+": "+bidderCurrentBids[0]);
             pushToMax(0);
         } else if(bidderCurrentBids[0] > bidderCurrentBids[1] && bidderCurrentBids[1] > 0){
-             System.out.println(bidderNames[1]+": "+bidderCurrentBids[1]);
             pushToMax(1);
         }
         if(bidderCurrentBids[0] < 0){
@@ -137,8 +135,6 @@ public class EthicalAuction {
             }
             System.out.println("Winner of " + name + " is " + bidderNames[0] + " they pay " + bidderCurrentBids[0]);
         }else {
-            System.out.println("Player 1: " + bidderCurrentBids[0]);
-            System.out.println("Player 2: " + bidderCurrentBids[1]);
             currentWinner();
         }
     }
