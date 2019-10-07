@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6fcfdf6e-b3c6-4afe-949e-5ee81c0d9d59" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newStudio/src/newStudio/EthicalAuction.java" beforeDir="false" afterPath="$PROJECT_DIR$/newStudio/src/newStudio/EthicalAuction.java" afterDir="false" />
-    </list>
+    <list default="true" id="6fcfdf6e-b3c6-4afe-949e-5ee81c0d9d59" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570469007168</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="commented code + deleted print lines">
+      <created>1570471308087</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1570471308087</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,6 +205,7 @@
     <MESSAGE value="fixed ethical problem" />
     <MESSAGE value="correct solution added another parellel array" />
     <MESSAGE value="commented code" />
-    <option name="LAST_COMMIT_MESSAGE" value="commented code" />
+    <MESSAGE value="commented code + deleted print lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="commented code + deleted print lines" />
   </component>
 </project>
