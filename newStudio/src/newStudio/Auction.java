@@ -69,7 +69,9 @@ public class Auction {
         }
     }
 
-
+    /**
+     *
+     */
     private void currentWinner(){ //calculates current winner of auction
         System.out.println("here");
             if(bidderCurrentBids[1] >= bidderCurrentBids[0]){

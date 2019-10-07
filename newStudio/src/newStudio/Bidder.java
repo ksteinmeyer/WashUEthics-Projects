@@ -9,8 +9,6 @@ public class Bidder {
     /**
      *
      * @param name -- bidder name, computer : human
-     //* @param maxBid -- maximum bid for given user
-     //* @param increment -- increment value, comes from auction obj
      */
     public Bidder(String name, int maxBid, int startingBid){
         this.name = name;
