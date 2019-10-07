@@ -24,7 +24,7 @@ public class Auction {
 
     public static void main(String[] args) {
         //here's where you can make your bids and enter them in the auction
-        Bidder Player1 = new Bidder("Player 1", 13, 9);
+        Bidder Player1 = new Bidder("Player 1", 90, 9);
         Bidder Player2 = new Bidder("Player 2", 10, 9);
 
         Auction auction = new Auction("auction",1, 9, Player1, Player2);
@@ -91,6 +91,9 @@ public class Auction {
             winner = bidderNames[0];
             System.out.println("Winner of " + name + " is " + bidderNames[0] + " they pay " + bidderCurrentBids[0]);
         }else {
+            System.out.println("Player 1: " + bidderCurrentBids[0]);
+            System.out.println("Player 2: " + bidderCurrentBids[1]);
+
             currentWinner();
         }
     }

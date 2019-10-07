@@ -17,6 +17,7 @@ public class EthicalAuction {
     private String[] bidderNames = new String[numberOfBidders];
     private int[] bidderMaxBids = new int[numberOfBidders];
     private int[] bidderCurrentBids = new int[numberOfBidders];
+    private int[] previousBid = new int[numberOfBidders];
 
 
 
@@ -24,10 +25,10 @@ public class EthicalAuction {
 
     public static void main(String[] args) {
         //here's where you can make your bids and enter them in the auction
-        Bidder Player1 = new Bidder("Player 1", 12, 9);
-        Bidder Player2 = new Bidder("Player 2", 4, 9);
+        Bidder Player1 = new Bidder("Player 1", 21, 9);
+        Bidder Player2 = new Bidder("Player 2", 15, 9);
 
-        Auction auction = new Auction("auction",3, 9, Player1, Player2);
+        EthicalAuction auction = new EthicalAuction("auction",3, 9, Player1, Player2);
 
     }
 
@@ -53,6 +54,9 @@ public class EthicalAuction {
 
         this.bidderMaxBids[0] = this.playerOne.getMaxBid();
         this.bidderMaxBids[1] = this.playerTwo.getMaxBid();
+
+        this.previousBid[0] = this.playerOne.getCurrentBid();
+        this.previousBid[1] = this.playerTwo.getCurrentBid();
         for(int i = 0; i < bidderCurrentBids.length; i++){
             bidQualify(i);
         }
@@ -72,20 +76,32 @@ public class EthicalAuction {
 
 
     private void currentWinner(){ //calculates current winner of auction
-        if(bidderCurrentBids[1] > bidderCurrentBids[0] && bidderCurrentBids[0] > 0){
-           // System.out.println(bidderNames[0]+": "+bidderCurrentBids[0]);
+        if(bidderCurrentBids[1] >= bidderCurrentBids[0] && bidderCurrentBids[0] > 0){
+             System.out.println(bidderNames[0]+": "+bidderCurrentBids[0]);
             pushToMax(0);
         } else if(bidderCurrentBids[0] > bidderCurrentBids[1] && bidderCurrentBids[1] > 0){
-           // System.out.println(bidderNames[1]+": "+bidderCurrentBids[1]);
+             System.out.println(bidderNames[1]+": "+bidderCurrentBids[1]);
             pushToMax(1);
         }
         if(bidderCurrentBids[0] < 0){
-            winner = bidderNames[1];
-            System.out.println("Winner of " + name + " is " + bidderNames[1] + " they pay " + bidderCurrentBids[1]);
+            if(previousBid[0] + incrementAmount <= bidderMaxBids[1]){
+                bidderCurrentBids[1] = previousBid[0] + incrementAmount;
+                winner = bidderNames[1];
+                } else{
+                winner = bidderNames[0];
+            }
+            System.out.println("Winner of " + name + " is " + winner + " they pay " + bidderCurrentBids[1]);
         } else if(bidderCurrentBids[1] < 0){
-            winner = bidderNames[0];
+            if(previousBid[1] + incrementAmount <= bidderMaxBids[0]){
+                bidderCurrentBids[0] = previousBid[1] + incrementAmount;
+                winner = bidderNames[0];
+            } else{
+                winner = bidderNames[1];
+            }
             System.out.println("Winner of " + name + " is " + bidderNames[0] + " they pay " + bidderCurrentBids[0]);
         }else {
+            System.out.println("Player 1: " + bidderCurrentBids[0]);
+            System.out.println("Player 2: " + bidderCurrentBids[1]);
             currentWinner();
         }
     }
@@ -93,8 +109,10 @@ public class EthicalAuction {
 
     private int pushToMax(int i){
         if(bidderCurrentBids[i] + incrementAmount <= bidderMaxBids[i]){
+            previousBid[i] = bidderCurrentBids[i];
             bidderCurrentBids[i] = bidderCurrentBids[i] + incrementAmount;
         }else{
+            previousBid[i] = bidderCurrentBids[i];
             bidderCurrentBids[i] = -1;
         }
         return bidderCurrentBids[i];
