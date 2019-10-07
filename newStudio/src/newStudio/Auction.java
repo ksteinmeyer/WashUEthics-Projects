@@ -7,7 +7,7 @@ public class Auction {
     private final int incrementAmount; //how much bids will increment by
     private final int startingValue; //starting value of auction
 
-   // private Bidder[] bidders = new Bidder[2];
+    // private Bidder[] bidders = new Bidder[2];
     private Bidder playerOne;
     private Bidder playerTwo;
 
@@ -17,6 +17,7 @@ public class Auction {
     private String[] bidderNames = new String[numberOfBidders];
     private int[] bidderMaxBids = new int[numberOfBidders];
     private int[] bidderCurrentBids = new int[numberOfBidders];
+    private int[] previousBid = new int[numberOfBidders];
 
 
 
@@ -52,6 +53,9 @@ public class Auction {
 
         this.bidderMaxBids[0] = this.playerOne.getMaxBid();
         this.bidderMaxBids[1] = this.playerTwo.getMaxBid();
+
+        this.previousBid[0] = this.playerOne.getCurrentBid();
+        this.previousBid[1] = this.playerTwo.getCurrentBid();
         for(int i = 0; i < bidderCurrentBids.length; i++){
             bidQualify(i);
         }
@@ -101,8 +105,10 @@ public class Auction {
 
     private int pushToMax(int i){
         if(bidderCurrentBids[i] + incrementAmount <= bidderMaxBids[i]){
+            previousBid[i] = bidderCurrentBids[i];
             bidderCurrentBids[i] = bidderCurrentBids[i] + incrementAmount;
         }else{
+            previousBid[i] = bidderCurrentBids[i];
             bidderCurrentBids[i] = -1;
         }
         return bidderCurrentBids[i];

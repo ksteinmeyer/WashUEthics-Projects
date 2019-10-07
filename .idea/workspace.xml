@@ -42,7 +42,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.EthicalAuction">
+  <component name="RunManager" selected="Application.Auction">
     <configuration name="Auction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="newStudio.Auction" />
       <module name="newStudio" />
@@ -84,8 +84,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.EthicalAuction" />
         <item itemvalue="Application.Auction" />
+        <item itemvalue="Application.EthicalAuction" />
         <item itemvalue="Application.Bid" />
       </list>
     </recent_temporary>

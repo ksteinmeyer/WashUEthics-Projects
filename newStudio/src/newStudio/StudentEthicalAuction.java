@@ -16,6 +16,8 @@ public class StudentEthicalAuction{
     private String[] bidderNames = new String[numberOfBidders];
     private int[] bidderMaxBids = new int[numberOfBidders];
     private int[] bidderCurrentBids = new int[numberOfBidders];
+    private int[] previousBid = new int[numberOfBidders];
+
 
 
 
@@ -52,6 +54,9 @@ public class StudentEthicalAuction{
 
         this.bidderMaxBids[0] = this.playerOne.getMaxBid();
         this.bidderMaxBids[1] = this.playerTwo.getMaxBid();
+
+        this.previousBid[0] = this.playerOne.getCurrentBid();
+        this.previousBid[1] = this.playerTwo.getCurrentBid();
         for(int i = 0; i < bidderCurrentBids.length; i++){
             bidQualify(i);
         }
