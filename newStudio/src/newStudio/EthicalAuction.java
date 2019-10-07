@@ -24,10 +24,10 @@ public class EthicalAuction {
 
     public static void main(String[] args) {
         //here's where you can make your bids and enter them in the auction
-        Bidder Player1 = new Bidder("Player 1", 20, 9);
-        Bidder Player2 = new Bidder("Player 2", 29, 9);
+        Bidder Player1 = new Bidder("Player 1", 12, 9);
+        Bidder Player2 = new Bidder("Player 2", 4, 9);
 
-        Auction auction = new Auction("auction",1, 9, Player1, Player2);
+        Auction auction = new Auction("auction",3, 9, Player1, Player2);
 
     }
 
@@ -74,7 +74,7 @@ public class EthicalAuction {
         if(bidderCurrentBids[1] > bidderCurrentBids[0] && bidderCurrentBids[0] > 0){
             System.out.println(bidderNames[0]+": "+bidderCurrentBids[0]);
             pushToMax(0);
-        } else if(bidderCurrentBids[1] > 0){
+        } else if(bidderCurrentBids[0] > bidderCurrentBids[1] && bidderCurrentBids[1] > 0){
             System.out.println(bidderNames[1]+": "+bidderCurrentBids[1]);
             pushToMax(1);
         }
