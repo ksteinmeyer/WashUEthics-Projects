@@ -73,16 +73,12 @@ public class Auction {
      *
      */
     private void currentWinner(){ //calculates current winner of auction
-        System.out.println("here");
             if(bidderCurrentBids[1] >= bidderCurrentBids[0]){
-                System.out.println("here2");
                 if (bidderCurrentBids[0] > 0){
-                    System.out.println(bidderNames[0]+": "+bidderCurrentBids[0]);
                     pushToMax(0);
                 }
             } else if(bidderCurrentBids[0] > bidderCurrentBids[1]){
                 if (bidderCurrentBids[1] > 0){
-                    System.out.println(bidderNames[1]+": "+bidderCurrentBids[1]);
                     pushToMax(1);
                 }
             }
@@ -95,15 +91,12 @@ public class Auction {
             winner = bidderNames[0];
             System.out.println("Winner of " + name + " is " + bidderNames[0] + " they pay " + bidderCurrentBids[0]);
         }else {
-            System.out.println(bidderNames[1]+": "+bidderCurrentBids[1]);
-            System.out.println(bidderNames[0]+": "+bidderCurrentBids[0]);
             currentWinner();
         }
     }
 
 
     private int pushToMax(int i){
-        System.out.println("here");
         if(bidderCurrentBids[i] + incrementAmount <= bidderMaxBids[i]){
             bidderCurrentBids[i] = bidderCurrentBids[i] + incrementAmount;
         }else{
