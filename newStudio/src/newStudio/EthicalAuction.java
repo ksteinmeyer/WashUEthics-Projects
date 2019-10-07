@@ -31,7 +31,8 @@ public class EthicalAuction {
 
     }
 
-    public EthicalAuction(String name, int incrementAmount, int startingValue, Bidder firstBidder, Bidder secondBidder){ //constructor creates object and initializes variables inside
+    public EthicalAuction(String name, int incrementAmount, int startingValue, Bidder firstBidder, Bidder secondBidder){
+        //constructor creates object and initializes variables inside
         this.name = name;
         this.incrementAmount = incrementAmount;
         this.startingValue = startingValue;
@@ -72,10 +73,10 @@ public class EthicalAuction {
 
     private void currentWinner(){ //calculates current winner of auction
         if(bidderCurrentBids[1] > bidderCurrentBids[0] && bidderCurrentBids[0] > 0){
-            System.out.println(bidderNames[0]+": "+bidderCurrentBids[0]);
+           // System.out.println(bidderNames[0]+": "+bidderCurrentBids[0]);
             pushToMax(0);
         } else if(bidderCurrentBids[0] > bidderCurrentBids[1] && bidderCurrentBids[1] > 0){
-            System.out.println(bidderNames[1]+": "+bidderCurrentBids[1]);
+           // System.out.println(bidderNames[1]+": "+bidderCurrentBids[1]);
             pushToMax(1);
         }
         if(bidderCurrentBids[0] < 0){
@@ -91,7 +92,6 @@ public class EthicalAuction {
 
 
     private int pushToMax(int i){
-        System.out.println("here");
         if(bidderCurrentBids[i] + incrementAmount <= bidderMaxBids[i]){
             bidderCurrentBids[i] = bidderCurrentBids[i] + incrementAmount;
         }else{
