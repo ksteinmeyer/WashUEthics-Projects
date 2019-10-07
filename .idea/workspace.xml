@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/newStudio/src/newStudio/Auction.java" beforeDir="false" afterPath="$PROJECT_DIR$/newStudio/src/newStudio/Auction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/newStudio/src/newStudio/EthicalAuction.java" beforeDir="false" afterPath="$PROJECT_DIR$/newStudio/src/newStudio/EthicalAuction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newStudio/src/newStudio/StudentEthicalAuction.java" beforeDir="false" afterPath="$PROJECT_DIR$/newStudio/src/newStudio/StudentEthicalAuction.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +158,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570428124910</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed ethical problem">
+      <created>1570467245130</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1570467245131</updated>
+    </task>
+    <task id="LOCAL-00010" summary="correct solution added another parellel array">
+      <created>1570467382405</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1570467382405</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +193,8 @@
     <MESSAGE value="cleaned code" />
     <MESSAGE value="fixed glitches" />
     <MESSAGE value="done" />
-    <option name="LAST_COMMIT_MESSAGE" value="done" />
+    <MESSAGE value="fixed ethical problem" />
+    <MESSAGE value="correct solution added another parellel array" />
+    <option name="LAST_COMMIT_MESSAGE" value="correct solution added another parellel array" />
   </component>
 </project>
