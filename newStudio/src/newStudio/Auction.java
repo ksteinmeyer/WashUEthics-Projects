@@ -24,10 +24,10 @@ public class Auction {
 
     public static void main(String[] args) {
         //here's where you can make your bids and enter them in the auction
-        Bidder playerOne = new Bidder("Player 1", 10, 2);
-        Bidder playerTwo= new Bidder("Player 2", 11 , 2);
+        Bidder Player1 = new Bidder("Player 1", 20, 9);
+        Bidder Player2 = new Bidder("Player 2", 29, 9);
 
-        Auction auction = new Auction("auction",1, 1, playerOne, playerTwo);
+        Auction auction = new Auction("auction",1, 9, Player1, Player2);
 
     }
 
@@ -71,18 +71,19 @@ public class Auction {
 
 
     private void currentWinner(){ //calculates current winner of auction
-            if(bidderCurrentBids[0] > bidderCurrentBids[1] && bidderCurrentBids[1] > 0){
-                System.out.println(bidderCurrentBids[1]);
-                pushToMax(1);
-            } else if(bidderCurrentBids[0] > 0){
+            if(bidderCurrentBids[1] > bidderCurrentBids[0] && bidderCurrentBids[0] > 0){
+                System.out.println(bidderNames[0]+": "+bidderCurrentBids[0]);
                 pushToMax(0);
+            } else if(bidderCurrentBids[1] > 0){
+                System.out.println(bidderNames[1]+": "+bidderCurrentBids[1]);
+                pushToMax(1);
             }
         if(bidderCurrentBids[0] < 0){
            winner = bidderNames[1];
-           System.out.println("Winner of " + name + " is " + bidderNames[1]);
+           System.out.println("Winner of " + name + " is " + bidderNames[1] + " they pay " + bidderCurrentBids[1]);
         } else if(bidderCurrentBids[1] < 0){
             winner = bidderNames[0];
-            System.out.println("Winner of " + name + " is " + bidderNames[0]);
+            System.out.println("Winner of " + name + " is " + bidderNames[0] + " they pay " + bidderCurrentBids[0]);
         }else {
             currentWinner();
         }
@@ -90,6 +91,7 @@ public class Auction {
 
 
     private int pushToMax(int i){
+        System.out.println("here");
         if(bidderCurrentBids[i] + incrementAmount <= bidderMaxBids[i]){
             bidderCurrentBids[i] = bidderCurrentBids[i] + incrementAmount;
         }else{
