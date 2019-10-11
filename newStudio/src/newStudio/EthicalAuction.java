@@ -114,7 +114,7 @@ public class EthicalAuction {
      */
     private void currentWinner(){ //calculates current winner of auction
         if(bidderCurrentBids[1] >= bidderCurrentBids[0] && bidderCurrentBids[0] > 0){
-            pushToMax(0);
+             pushToMax(0);
         } else if(bidderCurrentBids[0] > bidderCurrentBids[1] && bidderCurrentBids[1] > 0){
             pushToMax(1);
         }
@@ -122,18 +122,21 @@ public class EthicalAuction {
             if(previousBid[0] + incrementAmount <= bidderMaxBids[1]){
                 bidderCurrentBids[1] = previousBid[0] + incrementAmount;
                 winner = bidderNames[1];
-                } else{
+                System.out.println("Winner of " + name + " is " + winner + " they pay " + bidderCurrentBids[1]);
+            } else{
                 winner = bidderNames[0];
+                System.out.println("Winner of " + name + " is " + winner + " they pay " + previousBid[0]);
+
             }
-            System.out.println("Winner of " + name + " is " + winner + " they pay " + bidderCurrentBids[1]);
         } else if(bidderCurrentBids[1] < 0){
             if(previousBid[1] + incrementAmount <= bidderMaxBids[0]){
                 bidderCurrentBids[0] = previousBid[1] + incrementAmount;
                 winner = bidderNames[0];
+                System.out.println("Winner of " + name + " is " + bidderNames[0] + " they pay " + bidderCurrentBids[0]);
             } else{
                 winner = bidderNames[1];
+                System.out.println("Winner of " + name + " is " + bidderNames[1] + " they pay " + previousBid[1]);
             }
-            System.out.println("Winner of " + name + " is " + bidderNames[0] + " they pay " + bidderCurrentBids[0]);
         }else {
             currentWinner();
         }
